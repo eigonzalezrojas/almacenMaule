@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "idCategoria": 1,
+        "nombre": "Pan allulla",
+        "categoria": "Panadería",        
+        "precio": 1200,
+        "medida": "kilo"
+    },
+    {
+        "id": 2,
+        "idCategoria": 1,
+        "nombre": "Pan francés",
+        "categoria": "Panadería",
+        "precio": 1400,
+        "medida": "kilo"
+    },
+    {
+        "id": 3,
+        "idCategoria": 1,
+        "nombre": "Pan de molde",
+        "categoria": "Panadería",
+        "precio": 1500,
+        "medida": "kilo"
+    },
+    {
+        "id": 4,
+        "idCategoria": 2,
+        "nombre": "Lechuga",
+        "categoria": "Frutas y Verduras",
+        "precio": 700,
+        "medida": "unidad"
+    },
+    {
+        "id": 5,
+        "idCategoria": 2,
+        "nombre": "Tomate",
+        "categoria": "Frutas y Verduras",
+        "precio": 1200,
+        "medida": "kilo"
+    },
+    {
+        "id": 6,
+        "idCategoria": 2,
+        "nombre": "Repollo",
+        "categoria": "Frutas y Verduras",
+        "precio": 800,
+        "medida": "unidad"
+    },
+    {
+        "id": 7,
+        "idCategoria": 2,
+        "nombre": "Papas",
+        "categoria": "Frutas y Verduras",
+        "precio": 1000,
+        "medida": "kilo"
+    },
+    {
+        "id": 8,
+        "idCategoria": 2,
+        "nombre": "Manzana",
+        "categoria": "Frutas y Verduras",
+        "precio": 800,
+        "medida": "kilo"
+    },
+    {
+        "id": 9,
+        "idCategoria": 2,
+        "nombre": "Platano",
+        "categoria": "Frutas y Verduras",
+        "precio": 1200,
+        "medida": "kilo"
+    },
+    {
+        "id": 10,
+        "idCategoria": 2,
+        "nombre": "Durazno",
+        "categoria": "Frutas y Verduras",
+        "precio": 1000,
+        "medida": "kilo"
+    },
+    {
+        "id": 11,
+        "idCategoria": 3,
+        "nombre": "Pollo",
+        "categoria": "Carnes y Pescados",
+        "precio": 2500,
+        "medida": "kilo"
+    },
+    {
+        "id": 12,
+        "idCategoria": 3,
+        "nombre": "Vacuno",
+        "categoria": "Carnes y Pescados",
+        "precio": 12000,
+        "medida": "kilos"
+    },
+    {
+        "id": 13,
+        "idCategoria": 3,
+        "nombre": "Pavo",
+        "categoria": "Carnes y Pescados",
+        "precio": 7000,
+        "medida": "kilo"
+    },
+    {
+        "id": 14,
+        "idCategoria": 3,
+        "nombre": "Cerdo",
+        "categoria": "Carnes y Pescados",
+        "precio": 6500,
+        "medida": "kilo"
+    },
+    {
+        "id": 15,
+        "idCategoria": 3,
+        "nombre": "Salmon",
+        "categoria": "Carnes y Pescados",
+        "precio": 16000,
+        "medida": "kilo"
+    },
+    {
+        "id": 16,
+        "idCategoria": 3,
+        "nombre": "Mariscos",
+        "categoria": "Carnes y Pescados",
+        "precio": 12900,
+        "medida": "kilo"
+    },
+    {
+        "id": 17,
+        "idCategoria": 4,
+        "nombre": "Queso Gauda",
+        "categoria": "Lacteos",
+        "precio": 10000,
+        "medida": "kilo"
+    },
+    {
+        "id": 18,
+        "idCategoria": 4,
+        "nombre": "Queso fresco",
+        "categoria": "Lacteos",
+        "precio": 11000,
+        "medida": "kilo"
+    },
+    {
+        "id": 19,
+        "idCategoria": 4,
+        "nombre": "Leche natural",
+        "categoria": "Lacteos",
+        "precio": "adipisci placeat illum aut reiciendis qui",
+        "medida": "illum quis cupiditate provident sit magnam\nea sed aut omnis\nveniam maiores ullam consequatur atque\nadipisci quo iste expedita sit quos voluptas"
+    },
+    {
+        "id": 21,
+        "idCategoria": 4,
+        "nombre": "Yoghurt",
+        "categoria": "Lacteos",
+        "precio": 500,
+        "medida": "unidad"
+    },
+    {
+        "id": 22,
+        "idCategoria": 4,
+        "nombre": "Flan",
+        "categoria": "Lacteos",
+        "precio": 700,
+        "medida": "unidad"
+    },
+    {
+        "id": 23,
+        "idCategoria": 4,
+        "nombre": "Mantequilla",
+        "categoria": "Lacteos",
+        "precio": 3500,
+        "medida": "unidad"
+    },
+    {
+        "id": 24,
+        "idCategoria": 5,
+        "nombre": "Coca-Cola",
+        "categoria": "Bebidas y Alcohol",
+        "precio": 1000,
+        "medida": "Litro"
+    },
+    {
+        "id": 25,
+        "idCategoria": 5,
+        "nombre": "Fanta",
+        "categoria": "Bebidas y Alcohol",
+        "precio": 1000,
+        "medida": "Litro"
+    },
+    {
+        "id": 26,
+        "idCategoria": 5,
+        "nombre": "Sprite",
+        "categoria": "Bebidas y Alcohol",
+        "precio": 1000,
+        "medida": "Litro"
+    },
+    {
+        "id": 27,
+        "idCategoria": 5,
+        "nombre": "Coca-Cola",
+        "categoria": "Bebidas y Alcohol",
+        "precio": 1000,
+        "medida": "Litro"
+    },
+    {
+        "id": 28,
+        "idCategoria": 5,
+        "nombre": "Cerveza",
+        "categoria": "Bebidas y Alcohol",
+        "precio": 800,
+        "medida": "Unidad"
+    },
+    {
+        "id": 28,
+        "idCategoria": 6,
+        "nombre": "Fideos",
+        "categoria": "Despensa",
+        "precio": 1000,
+        "medida": "500 gr"
+    },
+    {
+        "id": 29,
+        "idCategoria": 6,
+        "nombre": "Arroz",
+        "categoria": "Despensa",
+        "precio": 1800,
+        "medida": "kilo"
+    },
+    {
+        "id": 30,
+        "idCategoria": 6,
+        "nombre": "Aceite",
+        "categoria": "Despensa",
+        "precio": 3000,
+        "medida": "litro"
+    }
+]
