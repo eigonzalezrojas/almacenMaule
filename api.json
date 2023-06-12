@@ -2,66 +2,75 @@
     {
         "id": 1,
         "idCategoria": 1,
-        "nombre": "Pan allulla",
+        "nombre": "Pan hallulla",
         "categoria": "Panadería",        
         "precio": 1200,
-        "medida": "kilo"
+        "medida": "kilo",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/701367a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 2,
         "idCategoria": 1,
         "nombre": "Pan francés",
         "categoria": "Panadería",
-        "precio": 1400,
-        "medida": "kilo"
+        "precio": 1200,
+        "medida": "kilo",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/333213a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 3,
         "idCategoria": 1,
         "nombre": "Pan de molde",
         "categoria": "Panadería",
-        "precio": 1500,
-        "medida": "kilo"
+        "precio": 2500,
+        "medida": "kilo",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/1163406a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 4,
         "idCategoria": 2,
         "nombre": "Lechuga",
         "categoria": "Frutas y Verduras",
-        "precio": 700,
-        "medida": "unidad"
+        "precio": 990,
+        "medida": "unidad",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/3791a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 5,
         "idCategoria": 2,
         "nombre": "Tomate",
         "categoria": "Frutas y Verduras",
-        "precio": 1200,
-        "medida": "kilo"
+        "precio": 1850,
+        "medida": "kilo",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/325702a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 6,
         "idCategoria": 2,
         "nombre": "Repollo",
         "categoria": "Frutas y Verduras",
-        "precio": 800,
-        "medida": "unidad"
+        "precio": 1390,
+        "medida": "unidad",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/4559a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 7,
         "idCategoria": 2,
         "nombre": "Papas",
         "categoria": "Frutas y Verduras",
-        "precio": 1000,
-        "medida": "kilo"
+        "precio": 2500,
+        "medida": "kilo",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/3821a.jpg]&scale=size[300x300]&sink"
+        
     },
     {
         "id": 8,
         "idCategoria": 2,
         "nombre": "Manzana",
         "categoria": "Frutas y Verduras",
-        "precio": 800,
-        "medida": "kilo"
+        "precio": 1290,
+        "medida": "kilo",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/848662a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 9,
@@ -69,174 +78,196 @@
         "nombre": "Platano",
         "categoria": "Frutas y Verduras",
         "precio": 1200,
-        "medida": "kilo"
+        "medida": "kilo",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/861623a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 10,
         "idCategoria": 2,
-        "nombre": "Durazno",
+        "nombre": "Kiwi",
         "categoria": "Frutas y Verduras",
-        "precio": 1000,
-        "medida": "kilo"
+        "precio": 2690,
+        "medida": "kilo",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/326262a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 11,
         "idCategoria": 3,
-        "nombre": "Pollo",
+        "nombre": "Pollo truto entero",
         "categoria": "Carnes y Pescados",
-        "precio": 2500,
-        "medida": "kilo"
+        "precio": 2480,
+        "medida": "830 gr",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/927333a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 12,
         "idCategoria": 3,
         "nombre": "Vacuno",
         "categoria": "Carnes y Pescados",
-        "precio": 12000,
-        "medida": "kilos"
+        "precio": 14500,
+        "medida": "kilo",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/4493159a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 13,
         "idCategoria": 3,
         "nombre": "Pavo",
         "categoria": "Carnes y Pescados",
-        "precio": 7000,
-        "medida": "kilo"
+        "precio": 4500,
+        "medida": "500 gr",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/602603a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 14,
         "idCategoria": 3,
-        "nombre": "Cerdo",
+        "nombre": "Costillas de cerdo",
         "categoria": "Carnes y Pescados",
-        "precio": 6500,
-        "medida": "kilo"
+        "precio": 11290,
+        "medida": "kilo",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/338511a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 15,
         "idCategoria": 3,
         "nombre": "Salmon",
         "categoria": "Carnes y Pescados",
-        "precio": 16000,
-        "medida": "kilo"
+        "precio": 5490,
+        "medida": "180 gr",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/1053739a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 16,
         "idCategoria": 3,
         "nombre": "Mariscos",
         "categoria": "Carnes y Pescados",
-        "precio": 12900,
-        "medida": "kilo"
+        "precio": 2290,
+        "medida": "500 gr",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/1363051a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 17,
         "idCategoria": 4,
         "nombre": "Queso Gauda",
         "categoria": "Lacteos",
-        "precio": 10000,
-        "medida": "kilo"
+        "precio": 5250,
+        "medida": "500 gr",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/937343a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 18,
         "idCategoria": 4,
         "nombre": "Queso fresco",
         "categoria": "Lacteos",
-        "precio": 11000,
-        "medida": "kilo"
+        "precio": 2550,
+        "medida": "450 gr",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/917170a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 19,
         "idCategoria": 4,
         "nombre": "Leche natural",
         "categoria": "Lacteos",
-        "precio": "adipisci placeat illum aut reiciendis qui",
-        "medida": "illum quis cupiditate provident sit magnam\nea sed aut omnis\nveniam maiores ullam consequatur atque\nadipisci quo iste expedita sit quos voluptas"
+        "precio": 940,
+        "medida": "litro",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/3091a.jpg]&scale=size[300x300]&sink"
+    },
+    {
+        "id": 20,
+        "idCategoria": 4,
+        "nombre": "Yoghurt",
+        "categoria": "Lacteos",
+        "precio": 1850,
+        "medida": "kilo",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/5273a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 21,
         "idCategoria": 4,
-        "nombre": "Yoghurt",
+        "nombre": "Flan",
         "categoria": "Lacteos",
-        "precio": 500,
-        "medida": "unidad"
+        "precio": 340,
+        "medida": "unidad",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/2109a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 22,
         "idCategoria": 4,
-        "nombre": "Flan",
+        "nombre": "Mantequilla",
         "categoria": "Lacteos",
-        "precio": 700,
-        "medida": "unidad"
+        "precio": 2490,
+        "medida": "250 gr",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/2071a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 23,
-        "idCategoria": 4,
-        "nombre": "Mantequilla",
-        "categoria": "Lacteos",
-        "precio": 3500,
-        "medida": "unidad"
+        "idCategoria": 5,
+        "nombre": "Coca-Cola",
+        "categoria": "Bebidas y Alcohol",
+        "precio": 2890,
+        "medida": "3 litros",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/3923a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 24,
         "idCategoria": 5,
-        "nombre": "Coca-Cola",
+        "nombre": "Fanta",
         "categoria": "Bebidas y Alcohol",
-        "precio": 1000,
-        "medida": "Litro"
+        "precio": 2490,
+        "medida": "3 litros",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/701989a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 25,
         "idCategoria": 5,
-        "nombre": "Fanta",
+        "nombre": "Sprite",
         "categoria": "Bebidas y Alcohol",
-        "precio": 1000,
-        "medida": "Litro"
+        "precio": 2890,
+        "medida": "3 litros",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/574320a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 26,
         "idCategoria": 5,
-        "nombre": "Sprite",
+        "nombre": "Pepsi",
         "categoria": "Bebidas y Alcohol",
-        "precio": 1000,
-        "medida": "Litro"
+        "precio": 2690,
+        "medida": "3 litros",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/3943a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 27,
         "idCategoria": 5,
-        "nombre": "Coca-Cola",
-        "categoria": "Bebidas y Alcohol",
-        "precio": 1000,
-        "medida": "Litro"
-    },
-    {
-        "id": 28,
-        "idCategoria": 5,
         "nombre": "Cerveza",
         "categoria": "Bebidas y Alcohol",
-        "precio": 800,
-        "medida": "Unidad"
+        "precio": 990,
+        "medida": "500 ml",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/716506a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 28,
         "idCategoria": 6,
         "nombre": "Fideos",
         "categoria": "Despensa",
-        "precio": 1000,
-        "medida": "500 gr"
+        "precio": 1050,
+        "medida": "400 gr",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/10703a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 29,
         "idCategoria": 6,
         "nombre": "Arroz",
         "categoria": "Despensa",
-        "precio": 1800,
-        "medida": "kilo"
+        "precio": 1290,
+        "medida": "kilo",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/2411a.jpg]&scale=size[300x300]&sink"
     },
     {
         "id": 30,
         "idCategoria": 6,
         "nombre": "Aceite",
         "categoria": "Despensa",
-        "precio": 3000,
-        "medida": "litro"
+        "precio": 3790,
+        "medida": "litro",
+        "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/2321a.jpg]&scale=size[300x300]&sink"
     }
 ]
