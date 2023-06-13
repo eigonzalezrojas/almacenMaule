@@ -1,0 +1,11 @@
+/*Centrar imágen producto*/
+#imgProducto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Disminuir tamaño imágen*/
+.card-img-top{
+    width: 40%;
+}
