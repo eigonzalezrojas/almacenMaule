@@ -20,18 +20,18 @@
               <th scope="col">Total</th>
             </tr>
           </thead>
-          <tbody class="row" id="items"></tbody>
+          <tbody id="items"></tbody>
           <tfoot>
             <tr id="footer">
               <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
             </tr>
           </tfoot>
         </table>
-        <h4>Cards</h4>
+        <h4>Productos</h4>
         <div class="row" id="cards"></div>
-      </div>
+    </div>
   
-      <template id="template-footer">
+    <template id="template-footer">
           <th scope="row" colspan="2">Total productos</th>
           <td>10</td>
           <td>
@@ -40,9 +40,9 @@
               </button>
           </td>
           <td class="font-weight-bold">$ <span>5000</span></td>
-      </template>
+    </template>
       
-      <template id="template-carrito">
+    <template id="template-carrito">
         <tr>
           <th scope="row">id</th>
           <td>Café</td>
@@ -57,22 +57,23 @@
           </td>
           <td>$ <span>500</span></td>
         </tr>
-      </template>
+    </template>
   
-      <template id="template-card">
-        <div class="col-12 mb-2 col-md-4">
-            <div class="card">
-                <div id="imgProducto">
-                    <img src="" alt="" class="card-img-top">
-                </div>
-                <div class="card-body">
-                    <h5>Titulo</h5>
-                    <p id="precio">precio</p>
-                    <p id="cantidad">cantidad</p>
-                    <button class="btn btn-dark">Comprar</button>
-                </div>
-            </div>
-        </div>
+    <template id="template-card">
+      <div class="col-12 mb-2 col-md-4">
+          <div class="card">
+              <div id="imgProducto">
+                  <img src="" alt="" class="card-img-top">
+              </div>
+              <div class="card-body">
+                  <h5>Titulo</h5>
+                  <div></div>
+                  <p id="precio">$precio</p>
+                  <p id="cantidad">cantidad</p>
+                  <button class="btn btn-dark">Comprar</button>
+              </div>
+          </div>
+      </div>
     </template>
   
 

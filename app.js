@@ -36,12 +36,13 @@ const fetchData = async()=>{
     }
 }
 
+//Generamos los productos junto a su descripción
 const pintarCards = (data)=>{
     //console.log(data);
     items.innerHTML = ''
     data.forEach( producto =>{
         templateCard.querySelector('h5').textContent = producto.nombre
-        templateCard.querySelector('#precio').textContent = `$ ${producto.precio}`
+        templateCard.querySelector('#precio').textContent = producto.precio
         templateCard.querySelector('#cantidad').textContent = producto.medida
         templateCard.querySelector('img').setAttribute("src", producto.img)
         templateCard.querySelector('.btn-dark').dataset.id = producto.id
@@ -52,6 +53,7 @@ const pintarCards = (data)=>{
     cards.appendChild(fragment)
 }
 
+//Acción de agregar producto ejecutado por botón comprar
 const addCarrito = (e) =>{
     //console.log(e.target);
     //console.log(e.target.classList.contains('btn-dark'));
@@ -62,6 +64,7 @@ const addCarrito = (e) =>{
     // Detenemos cualquier otro evento en cards
     e.stopPropagation()
 }
+
 
 const setCarrito = objeto =>{
     //console.log(obj);
@@ -91,9 +94,12 @@ const pintarCarrito = () => {
         templateCarrito.querySelector('th').textContent = producto.id
         templateCarrito.querySelectorAll('td')[0].textContent = producto.nombre
         templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad
+        templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio
+
+        //Botones acción agregar-eliminar
         templateCarrito.querySelector('.btn-info').dataset.id = producto.id
         templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
-        templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio
+        
         const clone = templateCarrito.cloneNode(true)
         fragment.appendChild(clone)        
     })
