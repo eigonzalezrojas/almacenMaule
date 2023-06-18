@@ -62,6 +62,13 @@ const addCarrito = (e) =>{
     //console.log(e.target.classList.contains('btn-dark'));
     if (e.target.classList.contains('btn-dark')) {
         //console.log(e.target.parentElement)
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: '¡Producto agregado!',
+            showConfirmButton: false,
+            timer: 1500
+        })
         setCarrito(e.target.parentElement)
     }
     // Detenemos cualquier otro evento en cards
@@ -138,30 +145,70 @@ const pintarFooter = () => {
 
     const btnVaciar = document.getElementById('vaciar-carrito')
     btnVaciar.addEventListener('click', () =>{
-        carrito = {}
-        pintarCarrito()
+        Swal.fire({
+            title: '¿Estas seguro de vaciar el carrito?',
+            text: "Eliminaremos todos los productos del carrito",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, vaciar carrito'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                carrito = {}
+                pintarCarrito()
+                Swal.fire(
+                    '¡Carrito vacío!',
+                    'Productos eliminados',
+                    'success'
+                )
+            }
+        })        
     })
 }
 
 const btnAccion = e =>{
-    console.log(e.target)
+    //console.log(e.target)
     //Acción de aumentar la cantidad de productos al carrito
     if(e.target.classList.contains('btn-info')){
         //console.log(carrito[e.target.dataset.id])
         const producto = carrito[e.target.dataset.id]
         producto.cantidad ++
-        carrito[e.target.dataset.id] = {...producto}
+        carrito[e.target.dataset.id] = {...producto}        
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: '¡Producto agregado!',
+            showConfirmButton: false,
+            timer: 1500
+        })
         pintarCarrito()
     }
 
     if(e.target.classList.contains('btn-danger')){
-        const producto = carrito[e.target.dataset.id]
-        producto.cantidad --
-        if (producto.cantidad === 0) {
-            delete carrito[e.target.dataset.id]
-        }
-        pintarCarrito()
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: "Quitaremos el producto del carrito",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, quitar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const producto = carrito[e.target.dataset.id]
+                producto.cantidad --
+                if (producto.cantidad === 0) {
+                    delete carrito[e.target.dataset.id]
+                }                               
+                Swal.fire(
+                    '¡Eliminado!',
+                    'El producto fue eliminado del carrito',
+                    'success'
+                    )
+                pintarCarrito() 
+            }
+        })
     }
-
     e.stopPropagation()
 }
