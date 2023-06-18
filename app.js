@@ -7,21 +7,24 @@ const footer = document.getElementById('footer')
 const templateCard = document.getElementById('template-card').content
 const templateFooter = document.getElementById('template-footer').content
 const templateCarrito = document.getElementById('template-carrito').content
-
-
 //fragmento memoria volatil 
 const fragment = document.createDocumentFragment()
-
 //creación del carrito, coleccion de objetos
 let carrito =  {}
 
 //Esperamos que se cargue primero todo el HTML
 document.addEventListener("DOMContentLoaded", () => {
     fetchData()
+    if (localStorage.getItem('carrito')) {
+        carrito = JSON.parse(localStorage.getItem('carrito'))
+        pintarCarrito()
+    }
 })
-
 cards.addEventListener('click', e =>{
     addCarrito(e)
+})
+items.addEventListener('click', e =>{
+    btnAccion(e)
 })
 
 //Realizamos la obtención de data desde el archivo json de productos
@@ -65,7 +68,6 @@ const addCarrito = (e) =>{
     e.stopPropagation()
 }
 
-
 const setCarrito = objeto =>{
     //console.log(obj);
     const producto = {
@@ -75,11 +77,9 @@ const setCarrito = objeto =>{
         medida : objeto.querySelector('#cantidad').textContent,
         cantidad : 1
     }
-
     if (carrito.hasOwnProperty(producto.id)) {
         producto.cantidad = carrito[producto.id].cantidad + 1
     }
-
     //spread syntax => si NO existe se crea el producto, si NO existe lo sobre escribe
     carrito[producto.id] = {...producto}
     pintarCarrito()    
@@ -106,12 +106,17 @@ const pintarCarrito = () => {
     items.appendChild(fragment)
 
     pintarFooter()
+
+    //Guardamos la información como una colección de objetos en Local Storage
+    localStorage.setItem('carrito', JSON.stringify(carrito))    
 }
 
 const pintarFooter = () => {
     footer.innerHTML = ''
     if (Object.keys(carrito).length === 0) {
         footer.innerHTML = `<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>`
+        //utilizamos el return para que no continue con el proceso
+        return
     }
 
     // Utilizamos Object values ya que es un arreglo de objetos
@@ -127,9 +132,36 @@ const pintarFooter = () => {
 
     //Creamos un duplicado del objeto que se envía y entrega el objeto de clonación
     const clone = templateFooter.cloneNode(true)
-
     //Agrega un nuevo nodo al final de la lista de un elemento hijo de un elemento padre especificado.
     fragment.appendChild(clone)
-
     footer.appendChild(fragment)
+
+    const btnVaciar = document.getElementById('vaciar-carrito')
+    btnVaciar.addEventListener('click', () =>{
+        carrito = {}
+        pintarCarrito()
+    })
+}
+
+const btnAccion = e =>{
+    console.log(e.target)
+    //Acción de aumentar la cantidad de productos al carrito
+    if(e.target.classList.contains('btn-info')){
+        //console.log(carrito[e.target.dataset.id])
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad ++
+        carrito[e.target.dataset.id] = {...producto}
+        pintarCarrito()
+    }
+
+    if(e.target.classList.contains('btn-danger')){
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad --
+        if (producto.cantidad === 0) {
+            delete carrito[e.target.dataset.id]
+        }
+        pintarCarrito()
+    }
+
+    e.stopPropagation()
 }
