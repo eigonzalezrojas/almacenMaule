@@ -104,4 +104,32 @@ const pintarCarrito = () => {
         fragment.appendChild(clone)        
     })
     items.appendChild(fragment)
+
+    pintarFooter()
+}
+
+const pintarFooter = () => {
+    footer.innerHTML = ''
+    if (Object.keys(carrito).length === 0) {
+        footer.innerHTML = `<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>`
+    }
+
+    // Utilizamos Object values ya que es un arreglo de objetos
+    // acc irá acumulando la cantidad de objetos
+    // {cantidad} forma de acceder al campo del objeto
+    const nCantidad = Object.values(carrito).reduce((acc, {cantidad})=> acc + cantidad, 0)
+    //console.log(nCantidad);
+    const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio})=>acc + cantidad * precio, 0)
+    //console.log(nPrecio);
+
+    templateFooter.querySelectorAll('td')[0].textContent = nCantidad
+    templateFooter.querySelector('span').textContent = nPrecio
+
+    //Creamos un duplicado del objeto que se envía y entrega el objeto de clonación
+    const clone = templateFooter.cloneNode(true)
+
+    //Agrega un nuevo nodo al final de la lista de un elemento hijo de un elemento padre especificado.
+    fragment.appendChild(clone)
+
+    footer.appendChild(fragment)
 }
