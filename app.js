@@ -236,13 +236,27 @@ const btnAccion = e =>{
     e.stopPropagation()
 }
 
+//Funcion que filtra según la categoria del producto
+// Primero realizamos la acción de activar o desactivar botón de categoria
+// Luego filtramos comparando el nombre de categoria del botón con el de la tarjeta del producto
 mostrarCategoria = (value) => {
     let buttons = document.querySelectorAll(".btn-category")    
     buttons.forEach((button) =>{
-        if (value == button.innerText) {            
+        if (value === button.innerText) {            
             button.classList.add("active")            
         }else{            
             button.classList.remove("active")
         }
+    })
+
+    document.querySelectorAll("#dproducto").forEach(producto =>{
+        if (value=="Todos") {
+            producto.classList.remove("filtro")
+            return
+        }else{
+            producto.textContent.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+            ?producto.classList.remove("filtro")
+            :producto.classList.add("filtro")
+        }                   
     })
 }
