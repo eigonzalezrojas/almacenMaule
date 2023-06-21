@@ -23,7 +23,7 @@
         "nombre": "Pan de molde",
         "categoria": "Panadería",
         "precio": 2500,
-        "medida": "kilo",
+        "medida": "unidad",
         "img" : "https://images.lider.cl/wmtcl?source=url[file:/productos/1163406a.jpg]&scale=size[300x300]&sink"
     },
     {

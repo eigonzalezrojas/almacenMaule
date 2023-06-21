@@ -26,10 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
 //utilizamos keyup para el ingreso de letras o palabras (input)
 //utilizamos el id "dproducto" que contiene el producto
 //si se encuentra el producto agregamos la clase css "filtro" para mostrar o esconder el producto
-document.addEventListener("keyup", e =>{      
+document.addEventListener("keyup", e =>{
     if (e.target.matches("#buscador")) {
-        document.querySelectorAll("#dproducto").forEach(producto =>{
-            console.log(producto.textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))            
+        document.querySelectorAll("#dproducto").forEach(producto =>{                      
             producto.textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
             ?producto.classList.remove("filtro")
             :producto.classList.add("filtro")
@@ -65,6 +64,7 @@ const pintarCards = (data)=>{
         templateCard.querySelector('h5').textContent = producto.nombre
         templateCard.querySelector('#precio').textContent = producto.precio
         templateCard.querySelector('#cantidad').textContent = producto.medida
+        templateCard.querySelector('#categoria').textContent = producto.categoria
         templateCard.querySelector('img').setAttribute("src", producto.img)
         templateCard.querySelector('.btn-dark').dataset.id = producto.id
         
