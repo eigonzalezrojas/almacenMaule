@@ -13,6 +13,7 @@ const fragment = document.createDocumentFragment()
 let carrito =  {}
 
 //Esperamos que se cargue primero todo el HTML
+//Luego utilizamos el local storage y verificamos que el carrito tenia o no productos agregados
 document.addEventListener("DOMContentLoaded", () => {
     fetchData()
     if (localStorage.getItem('carrito')) {
@@ -20,12 +21,29 @@ document.addEventListener("DOMContentLoaded", () => {
         pintarCarrito()
     }
 })
+
+//Funcion buscador de productos
+//utilizamos keyup para el ingreso de letras o palabras (input)
+//utilizamos el id "dproducto" que contiene el producto
+//si se encuentra el producto agregamos la clase css "filtro" para mostrar o esconder el producto
+document.addEventListener("keyup", e =>{      
+    if (e.target.matches("#buscador")) {
+        document.querySelectorAll("#dproducto").forEach(producto =>{
+            console.log(producto.textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()))            
+            producto.textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())
+            ?producto.classList.remove("filtro")
+            :producto.classList.add("filtro")
+        })
+    }
+})
+
 cards.addEventListener('click', e =>{
     addCarrito(e)
 })
 items.addEventListener('click', e =>{
     btnAccion(e)
 })
+
 
 //Realizamos la obtención de data desde el archivo json de productos
 const fetchData = async()=>{
@@ -75,6 +93,8 @@ const addCarrito = (e) =>{
     e.stopPropagation()
 }
 
+//Función la cual verifica si el producto ya existe en el carrito
+//Si agregamos nuevamente el producto, simplemente aumentamos su cantidad
 const setCarrito = objeto =>{
     //console.log(obj);
     const producto = {
@@ -87,11 +107,12 @@ const setCarrito = objeto =>{
     if (carrito.hasOwnProperty(producto.id)) {
         producto.cantidad = carrito[producto.id].cantidad + 1
     }
-    //spread syntax => si NO existe se crea el producto, si NO existe lo sobre escribe
+    //spread syntax => si NO existe se crea el producto, si existe lo sobre escribe
     carrito[producto.id] = {...producto}
     pintarCarrito()    
 }
 
+//Agregamos los productos seleccionados a la sección carrito
 const pintarCarrito = () => {
     //console.log(carrito);
     items.innerHTML = ''
@@ -118,6 +139,7 @@ const pintarCarrito = () => {
     localStorage.setItem('carrito', JSON.stringify(carrito))    
 }
 
+//Sección operaciones respecto a productos en el carrito (agregar-eliminar-total-vaciar)
 const pintarFooter = () => {
     footer.innerHTML = ''
     if (Object.keys(carrito).length === 0) {
@@ -167,6 +189,7 @@ const pintarFooter = () => {
     })
 }
 
+//Acciones de botones del carrito (agregar-eliminar unidades de producto)
 const btnAccion = e =>{
     //console.log(e.target)
     //Acción de aumentar la cantidad de productos al carrito
@@ -193,7 +216,7 @@ const btnAccion = e =>{
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, quitar'
+            confirmButtonText: 'Sí, quitar'
         }).then((result) => {
             if (result.isConfirmed) {
                 const producto = carrito[e.target.dataset.id]
@@ -211,4 +234,15 @@ const btnAccion = e =>{
         })
     }
     e.stopPropagation()
+}
+
+mostrarCategoria = (value) => {
+    let buttons = document.querySelectorAll(".btn-category")    
+    buttons.forEach((button) =>{
+        if (value == button.innerText) {            
+            button.classList.add("active")            
+        }else{            
+            button.classList.remove("active")
+        }
+    })
 }
